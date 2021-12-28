@@ -18,9 +18,9 @@ const Layout = ({ title, children }: LayoutProps) => {
       transition="0.5s ease-out"
       backgroundColor={colorMode === 'light' ? 'gray.100' : 'gray.900'}>
       <Meta title={title} />
+      <Header />
 
-      <Box maxWidth={800} margin="0 auto">
-        <Header />
+      <Box maxWidth={800} margin="0 auto" position="relative" top={100} padding={4}>
         <Box as="main" marginY={22}>
           {children}
         </Box>

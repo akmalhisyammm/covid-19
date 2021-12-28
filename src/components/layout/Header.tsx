@@ -1,22 +1,48 @@
-import { Flex, Grid, Heading, Link as ChakraLink } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Grid,
+  Heading,
+  Image,
+  Link as ChakraLink,
+  Text,
+  useColorMode,
+} from '@chakra-ui/react';
 import AppMenu from './AppMenu';
-
 import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
-  return (
-    <Flex as="header" width="full" alignItems="center" paddingY={8}>
-      <ChakraLink href="/" passHref>
-        <Heading as="h1" fontSize={['md', 'xl']}>
-          Covid-19 Statistic
-        </Heading>
-      </ChakraLink>
+  const { colorMode } = useColorMode();
 
-      <Grid templateColumns="repeat(2, 1fr)" gap={1} marginLeft="auto">
-        <ThemeToggle />
-        <AppMenu />
-      </Grid>
-    </Flex>
+  return (
+    <Box
+      as="header"
+      width="full"
+      height={100}
+      backgroundColor={colorMode === 'light' ? 'rgba(255, 255, 255, 0.5)' : 'rgba(45, 55, 72, 0.5)'}
+      backdropFilter="blur(10px)"
+      boxShadow="0px 4px 8px 1px rgba(0, 0, 0, 0.1);"
+      position="fixed"
+      zIndex={5}>
+      <Flex as="nav" maxWidth={800} height="full" margin="0 auto" alignItems="center" padding={4}>
+        <ChakraLink href="/" passHref>
+          <Flex alignItems="center">
+            <Image src="/icon/virus.png" alt="logo" width={50} />
+            <Box marginLeft={4}>
+              <Heading as="h1" fontSize={['md', 'xl']}>
+                COVID-19 Statistic
+              </Heading>
+              <Text as="small">Global - Indonesia</Text>
+            </Box>
+          </Flex>
+        </ChakraLink>
+
+        <Grid templateColumns="repeat(2, 1fr)" gap={1} marginLeft="auto">
+          <ThemeToggle />
+          <AppMenu />
+        </Grid>
+      </Flex>
+    </Box>
   );
 };
 

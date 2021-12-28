@@ -6,7 +6,6 @@ const Meta = ({ title }: MetaProps) => {
   return (
     <Head>
       <title>{title && `${title} | `}COVID-19 Statistic</title>
-      <link rel="icon" href="https://via.placeholder.com/150" />
     </Head>
   );
 };
