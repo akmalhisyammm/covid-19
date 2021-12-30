@@ -1,11 +1,12 @@
 import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import { DateTime } from 'luxon';
 import { useGlobalStat } from 'hooks';
+import { SWRGlobalStat } from 'types';
 
 import StatCard from './StatCard';
 
 const GlobalSection = () => {
-  const { data, isLoading, isError } = useGlobalStat();
+  const { data, isLoading, isError }: SWRGlobalStat = useGlobalStat();
 
   if (isError) return <Text>Failed to Fetch Data</Text>;
 
