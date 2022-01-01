@@ -8,7 +8,7 @@ type StatCardProps = {
 };
 
 const StatCard = ({ type, data, isLoading }: StatCardProps) => {
-  const cardBackgroundColor = () => {
+  const cardColor = () => {
     switch (type) {
       case 'confirmed':
         return 'linear(to-r, orange.700, orange.400)';
@@ -22,9 +22,9 @@ const StatCard = ({ type, data, isLoading }: StatCardProps) => {
   return (
     <Skeleton borderRadius={12} isLoaded={!isLoading} fadeDuration={2}>
       <Flex
-        bgGradient={cardBackgroundColor()}
+        bgGradient={cardColor()}
         color="gray.100"
-        boxShadow="0px 16px 16px -12px rgba(0, 0, 0, 0.4)"
+        boxShadow="0px 16px 16px -12px rgba(0, 0, 0, 0.3)"
         height={100}
         borderRadius={12}
         alignItems="center"
