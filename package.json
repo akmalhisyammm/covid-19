@@ -19,6 +19,8 @@
     "@chakra-ui/react": "^1.7.3",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@nivo/core": "^0.78.0",
+    "@nivo/line": "^0.78.0",
     "axios": "^0.24.0",
     "framer-motion": "^4",
     "luxon": "^2.2.0",
