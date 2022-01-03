@@ -19,7 +19,7 @@ const Header = () => {
       as="header"
       width="full"
       height={100}
-      backgroundColor={colorMode === 'light' ? 'rgba(255, 255, 255, 0.5)' : 'rgba(45, 55, 72, 0.5)'}
+      backgroundColor={colorMode === 'light' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(45, 55, 72, 0.7)'}
       backdropFilter="blur(10px)"
       boxShadow="0px 4px 8px 1px rgba(0, 0, 0, 0.1);"
       position="fixed"
