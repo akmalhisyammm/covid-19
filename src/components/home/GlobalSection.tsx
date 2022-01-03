@@ -11,7 +11,7 @@ const GlobalSection = () => {
   if (globalStat.isError) return <Text>Failed to Fetch Data</Text>;
 
   return (
-    <>
+    <Box>
       <Box marginBottom={4}>
         <Heading>Global Data</Heading>
         <Text as="small">
@@ -38,7 +38,7 @@ const GlobalSection = () => {
           />
         </SimpleGrid>
       </Box>
-    </>
+    </Box>
   );
 };
 
