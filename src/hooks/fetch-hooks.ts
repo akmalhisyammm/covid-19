@@ -22,8 +22,8 @@ export const useCountryStat = (countryCode: string) => {
   return { data, isLoading: !error && !data, isError: error };
 };
 
-export const useIndonesiaData = () => {
-  const { data, error } = useSWR(`${INDONESIA_API_URL}/more`, fetcher);
+export const useIndonesiaDailyStat = () => {
+  const { data, error } = useSWR(`${INDONESIA_API_URL}/harian`, fetcher);
 
   return { data, isLoading: !error && !data, isError: error };
 };

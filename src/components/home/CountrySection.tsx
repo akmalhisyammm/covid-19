@@ -4,7 +4,7 @@ import Select, { SingleValue, StylesConfig } from 'react-select';
 import { useCountryList, useCountryStat } from 'hooks';
 import { SelectCountryList, SWRCountryList, SWRCountryStat } from 'types';
 
-import StatText from './stats/StatText';
+import StatText from 'components/stats/StatText';
 
 const CountrySection = () => {
   const [selectedCountry, setSelectedCountry] = useState<string>('');
