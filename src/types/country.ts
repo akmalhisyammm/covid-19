@@ -1,5 +1,5 @@
 export interface CountryList {
-  countries: [{ name: string }];
+  countries: { name: string }[];
 }
 
 export interface CountryStat {
