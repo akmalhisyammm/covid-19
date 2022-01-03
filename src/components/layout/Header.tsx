@@ -8,6 +8,8 @@ import {
   Text,
   useColorMode,
 } from '@chakra-ui/react';
+import Link from 'next/link';
+
 import AppMenu from './AppMenu';
 import ThemeToggle from './ThemeToggle';
 
@@ -25,17 +27,19 @@ const Header = () => {
       position="fixed"
       zIndex={5}>
       <Flex as="nav" maxWidth={800} height="full" margin="0 auto" alignItems="center" padding={4}>
-        <ChakraLink href="/" passHref>
-          <Flex alignItems="center">
-            <Image src="/icon/virus.png" alt="logo" width={50} />
-            <Box marginLeft={4}>
-              <Heading as="h1" fontSize={['md', 'xl']}>
-                COVID-19 Statistic
-              </Heading>
-              <Text as="small">Global - Indonesia</Text>
-            </Box>
-          </Flex>
-        </ChakraLink>
+        <Link href="/" passHref>
+          <ChakraLink>
+            <Flex alignItems="center">
+              <Image src="/icon/virus.png" alt="logo" width={50} />
+              <Box marginLeft={4}>
+                <Heading as="h1" fontSize={['md', 'xl']}>
+                  COVID-19 Statistic
+                </Heading>
+                <Text as="small">Global - Indonesia</Text>
+              </Box>
+            </Flex>
+          </ChakraLink>
+        </Link>
 
         <Grid templateColumns="repeat(2, 1fr)" gap={1} marginLeft="auto">
           <ThemeToggle />
