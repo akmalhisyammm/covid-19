@@ -5,7 +5,7 @@ import { DateTime } from 'luxon';
 import { useCountryStat } from 'hooks';
 import { SWRCountryStat } from 'types';
 
-import StatCard from './stats/StatCard';
+import StatCard from 'components/stats/StatCard';
 
 const IndonesiaSection = () => {
   const router = useRouter();

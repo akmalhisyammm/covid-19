@@ -3,7 +3,7 @@ import { DateTime } from 'luxon';
 import { useGlobalStat } from 'hooks';
 import { SWRGlobalStat } from 'types';
 
-import StatCard from './stats/StatCard';
+import StatCard from 'components/stats/StatCard';
 
 const GlobalSection = () => {
   const globalStat: SWRGlobalStat = useGlobalStat();
