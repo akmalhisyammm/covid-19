@@ -30,7 +30,7 @@ const Header = () => {
         <Link href="/" passHref>
           <ChakraLink>
             <Flex alignItems="center">
-              <Image src="/icon/virus.png" alt="logo" width={50} />
+              <Image src="/covid19-logo.png" alt="logo" width={50} />
               <Box marginLeft={4}>
                 <Heading as="h1" fontSize={['md', 'xl']}>
                   COVID-19 Statistic
