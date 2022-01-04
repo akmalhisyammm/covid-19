@@ -1,9 +1,7 @@
 import { Box } from '@chakra-ui/react';
 
 import Layout from 'components/layout';
-import GlobalSection from 'components/home/GlobalSection';
-import CountrySection from 'components/home/CountrySection';
-import IndonesiaSection from 'components/home/IndonesiaSection';
+import { CountrySection, GlobalSection, IndonesiaSection } from 'components/home';
 
 const Home = () => {
   return (
