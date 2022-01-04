@@ -1,12 +1,13 @@
-import { Box, Button, Heading } from '@chakra-ui/react';
+import { Box, Button } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { FaArrowLeft } from 'react-icons/fa';
 
 import Layout from 'components/layout';
-import DailySection from 'components/indonesia/DailySection';
+import { DailySection, HeroSection } from 'components/indonesia';
 
 const Indonesia = () => {
   const router = useRouter();
+
   return (
     <Layout title="Indonesia">
       <Button
@@ -17,9 +18,7 @@ const Indonesia = () => {
       </Button>
 
       <Box textAlign="center">
-        <Box marginBottom={4}>
-          <Heading>Indonesia Data</Heading>
-        </Box>
+        <HeroSection />
         <DailySection />
       </Box>
     </Layout>
