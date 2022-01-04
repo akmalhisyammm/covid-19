@@ -50,7 +50,10 @@ const IndonesiaSection = () => {
       <Button
         background="transparent"
         rightIcon={<FaArrowRight />}
-        onClick={() => router.push('/indonesia')}>
+        onClick={() => router.push('/indonesia')}
+        _hover={{
+          background: 'rgba(255, 255, 255, 0.1)',
+        }}>
         See Details
       </Button>
     </Box>
