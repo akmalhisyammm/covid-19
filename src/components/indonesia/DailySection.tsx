@@ -44,8 +44,6 @@ const DailySection = () => {
         },
       ];
 
-      console.log(newData);
-
       setModifiedData(newData);
     };
 
@@ -59,7 +57,7 @@ const DailySection = () => {
   if (indonesiaDailyStat.isError) return <Text>Failed to Fetch Data</Text>;
 
   return (
-    <Box>
+    <Box marginY={8}>
       <Box>
         <Text marginBottom={4}>Visualize by period:</Text>
         <Select placeholder="Select period..." marginBottom={4} onChange={handleSelectChange}>

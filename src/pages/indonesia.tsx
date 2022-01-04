@@ -1,9 +1,14 @@
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Button, SimpleGrid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { FaArrowLeft } from 'react-icons/fa';
 
 import Layout from 'components/layout';
-import { DailySection, HeroSection } from 'components/indonesia';
+import {
+  AdditionSection,
+  CumulativeSection,
+  DailySection,
+  HeroSection,
+} from 'components/indonesia';
 
 const Indonesia = () => {
   const router = useRouter();
@@ -19,6 +24,10 @@ const Indonesia = () => {
 
       <Box textAlign="center">
         <HeroSection />
+        <SimpleGrid columns={[1, 1, 2]} gap={4}>
+          <CumulativeSection />
+          <AdditionSection />
+        </SimpleGrid>
         <DailySection />
       </Box>
     </Layout>
