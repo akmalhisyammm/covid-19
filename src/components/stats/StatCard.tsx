@@ -2,7 +2,7 @@ import { Box, Flex, Skeleton, Text } from '@chakra-ui/react';
 import CountUp from 'react-countup';
 
 type StatCardProps = {
-  type: 'confirmed' | 'recovered' | 'deaths';
+  type: 'confirmed' | 'treated' | 'recovered' | 'deaths';
   data: number;
   isLoading: boolean;
 };
@@ -12,6 +12,8 @@ const StatCard = ({ type, data, isLoading }: StatCardProps) => {
     switch (type) {
       case 'confirmed':
         return 'linear(to-r, orange.700, orange.400)';
+      case 'treated':
+        return 'linear(to-r, yellow.700, yellow.400)';
       case 'recovered':
         return 'linear(to-r, teal.700, teal.400)';
       case 'deaths':

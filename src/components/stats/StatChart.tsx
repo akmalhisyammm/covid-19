@@ -67,7 +67,7 @@ const StatChart = ({ data, isLoading }: StatChartProps) => {
   const { colorMode } = useColorMode();
 
   return (
-    <Skeleton height={400} borderRadius={12} isLoaded={!isLoading} fadeDuration={2}>
+    <Skeleton height={400} isLoaded={!isLoading} fadeDuration={2}>
       <ResponsiveLine
         data={isLoading ? initialData : data}
         theme={{
@@ -80,7 +80,7 @@ const StatChart = ({ data, isLoading }: StatChartProps) => {
           },
         }}
         colors={isLoading ? initialData.map((data) => data.color) : data.map((data) => data.color)}
-        margin={{ top: 20, right: 110, bottom: 90, left: 60 }}
+        margin={{ top: 20, right: 110, bottom: 40, left: 60 }}
         xScale={{ type: 'point' }}
         yScale={{ type: 'linear', min: 0, max: 'auto', stacked: false, reverse: false }}
         curve="natural"
