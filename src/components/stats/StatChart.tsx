@@ -67,7 +67,7 @@ const StatChart = ({ data, isLoading }: StatChartProps) => {
   const { colorMode } = useColorMode();
 
   return (
-    <Skeleton height={400} isLoaded={!isLoading} fadeDuration={2}>
+    <Skeleton height={[300, 350, 400]} isLoaded={!isLoading} fadeDuration={2}>
       <ResponsiveLine
         data={isLoading ? initialData : data}
         theme={{
@@ -80,40 +80,34 @@ const StatChart = ({ data, isLoading }: StatChartProps) => {
           },
         }}
         colors={isLoading ? initialData.map((data) => data.color) : data.map((data) => data.color)}
-        margin={{ top: 20, right: 110, bottom: 40, left: 60 }}
+        margin={{ top: 40, right: 10, bottom: 20, left: 40 }}
         xScale={{ type: 'point' }}
         yScale={{ type: 'linear', min: 0, max: 'auto', stacked: false, reverse: false }}
         curve="natural"
         axisTop={null}
         axisRight={null}
-        axisBottom={{
-          tickValues: [],
-          legend: 'Date',
-          legendOffset: 20,
-          legendPosition: 'middle',
-        }}
+        axisBottom={null}
         axisLeft={{
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: 'Total',
-          legendOffset: -50,
           legendPosition: 'middle',
         }}
         pointSize={10}
         pointColor={{ from: 'color', modifiers: [] }}
+        pointLabelYOffset={-12}
         enableArea={true}
         useMesh={true}
         legends={[
           {
-            anchor: 'bottom-right',
-            direction: 'column',
+            anchor: 'top',
+            direction: 'row',
             justify: false,
-            translateX: 100,
-            translateY: 0,
+            translateX: 0,
+            translateY: -30,
             itemsSpacing: 0,
             itemDirection: 'left-to-right',
-            itemWidth: 85,
+            itemWidth: 100,
             itemHeight: 20,
             itemOpacity: 0.75,
             symbolSize: 12,

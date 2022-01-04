@@ -68,7 +68,7 @@ const DailySection = () => {
       </Box>
 
       {selectedPeriod && (
-        <Box height={400}>
+        <Box>
           <StatChart data={modifiedData} isLoading={indonesiaDailyStat.isLoading} />
         </Box>
       )}
