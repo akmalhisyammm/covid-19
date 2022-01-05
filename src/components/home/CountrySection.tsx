@@ -56,7 +56,7 @@ const CountrySection = () => {
       />
 
       {selectedCountry && (
-        <SimpleGrid columns={[1, 1, 3]} gap={4}>
+        <SimpleGrid columns={[1, 1, 3]}>
           <StatText
             type="confirmed"
             data={countryStat.data?.confirmed.value}

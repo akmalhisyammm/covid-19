@@ -72,7 +72,7 @@ const DetailSection = () => {
           API Source
         </Heading>
         <ChakraLink href="https://github.com/mathdroid/covid-19-api" isExternal>
-          COVID-19 API by Mathdroid
+          COVID-19 API by mathdroid
         </ChakraLink>
         <ChakraLink href="https://github.com/Reynadi531/api-covid19-indonesia-v2" isExternal>
           api-covid19-indonesia-v2 by Reynaldi531
