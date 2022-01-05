@@ -1,7 +1,7 @@
 {
   "name": "covid-19",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Covid-19 statistic web app",
   "author": "Muhammad Akmal Hisyam",
   "license": "MIT",
