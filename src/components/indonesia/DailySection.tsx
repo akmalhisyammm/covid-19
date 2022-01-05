@@ -61,9 +61,10 @@ const DailySection = () => {
       <Box>
         <Text marginBottom={4}>Visualize by period:</Text>
         <Select placeholder="Select period..." marginBottom={4} onChange={handleSelectChange}>
-          <option value={-7}>Last 7 days</option>
-          <option value={-30}>Last 30 days</option>
-          <option value={-60}>Last 60 days</option>
+          <option value={-7}>Last 1 week</option>
+          <option value={-14}>Last 2 weeks</option>
+          <option value={-21}>Last 3 weeks</option>
+          <option value={-28}>Last 4 weeks</option>
         </Select>
       </Box>
 
