@@ -2,10 +2,10 @@ import { Box, Button, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { FaArrowRight } from 'react-icons/fa';
 import { DateTime } from 'luxon';
-import { useCountryStat } from 'hooks';
-import { SWRCountryStat } from 'types';
+import { useCountryStat } from 'hooks/country';
+import { SWRCountryStat } from 'types/country';
 
-import StatCard from 'components/stats/StatCard';
+import { StatCard } from 'components/stats';
 
 const IndonesiaSection = () => {
   const router = useRouter();

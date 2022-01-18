@@ -2,10 +2,10 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import { Box, Select, Text } from '@chakra-ui/react';
 import { Serie } from '@nivo/line';
 import { DateTime } from 'luxon';
-import { useIndonesiaDailyStat } from 'hooks';
-import { SWRIndonesiaDailyStat } from 'types';
+import { useIndonesiaDailyStat } from 'hooks/indonesia';
+import { SWRIndonesiaDailyStat } from 'types/indonesia';
 
-import StatChart from 'components/stats/StatChart';
+import { StatChart } from 'components/stats';
 
 const DailySection = () => {
   const [modifiedData, setModifiedData] = useState<Serie[]>([]);

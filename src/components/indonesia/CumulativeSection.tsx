@@ -1,9 +1,9 @@
 import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import { DateTime } from 'luxon';
-import { useIndonesiaStat } from 'hooks';
-import { SWRIndonesiaStat } from 'types';
+import { useIndonesiaStat } from 'hooks/indonesia';
+import { SWRIndonesiaStat } from 'types/indonesia';
 
-import StatText from 'components/stats/StatText';
+import { StatText } from 'components/stats';
 
 const CumulativeSection = () => {
   const indonesiaStat: SWRIndonesiaStat = useIndonesiaStat();

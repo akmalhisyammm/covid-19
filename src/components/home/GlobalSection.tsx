@@ -1,9 +1,9 @@
 import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import { DateTime } from 'luxon';
-import { useGlobalStat } from 'hooks';
-import { SWRGlobalStat } from 'types';
+import { useGlobalStat } from 'hooks/global';
+import { SWRGlobalStat } from 'types/global';
 
-import StatCard from 'components/stats/StatCard';
+import { StatCard } from 'components/stats';
 
 const GlobalSection = () => {
   const globalStat: SWRGlobalStat = useGlobalStat();

@@ -9,6 +9,7 @@ const AppMenu = () => {
     <Menu id="menu" isLazy>
       <MenuButton as={IconButton} aria-label="Menu" icon={<BiMenu />} variant="ghost" />
       <MenuList>
+        <MenuItem onClick={() => router.push('/')}>Home</MenuItem>
         <MenuItem onClick={() => router.push('/indonesia')}>Indonesia</MenuItem>
         <MenuItem onClick={() => router.push('/about')}>About</MenuItem>
       </MenuList>
