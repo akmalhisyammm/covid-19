@@ -9,7 +9,15 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link rel="manifest" href="manifest.json" />
+
+          <meta name="application-name" content="COVID-19" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-title" content="COVID-19" />
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="theme-color" content="#171923" />
+        </Head>
         <body>
           <Main />
           <NextScript />
