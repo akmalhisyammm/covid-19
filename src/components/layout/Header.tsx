@@ -27,7 +27,7 @@ const Header = () => {
       position="fixed"
       zIndex={5}>
       <Flex as="nav" maxWidth={800} height="full" margin="0 auto" alignItems="center" padding={4}>
-        <Link href="/" passHref>
+        <Link href="/" legacyBehavior passHref>
           <ChakraLink>
             <Flex alignItems="center">
               <Image src="/covid19-logo.png" alt="logo" width={50} />
