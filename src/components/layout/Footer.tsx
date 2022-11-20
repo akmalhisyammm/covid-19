@@ -6,7 +6,7 @@ const Footer = () => {
     <Box as="footer" position="relative" width="full" textAlign="center" marginY={8}>
       <Text>
         2021 &bull;{' '}
-        <Link href="/about" passHref>
+        <Link href="/about" legacyBehavior passHref>
           <ChakraLink>Muhammad Akmal Hisyam</ChakraLink>
         </Link>
       </Text>
