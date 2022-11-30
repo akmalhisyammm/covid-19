@@ -1,7 +1,7 @@
 {
-  "name": "COVID-19 Statistic",
+  "name": "COVID-19",
   "short_name": "COVID-19",
-  "description": "COVID-19 statistic web app",
+  "description": "COVID-19 statistics web app",
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",
