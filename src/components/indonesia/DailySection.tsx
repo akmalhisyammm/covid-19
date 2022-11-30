@@ -1,11 +1,12 @@
-import { ChangeEvent, useEffect, useState } from 'react';
 import { Box, Select, Text } from '@chakra-ui/react';
 import { Serie } from '@nivo/line';
+import { useEffect, useState } from 'react';
 import { DateTime } from 'luxon';
-import { useIndonesiaDailyStat } from 'hooks/indonesia';
-import { SWRIndonesiaDailyStat } from 'types/indonesia';
 
 import { StatChart } from 'components/stats';
+import { useIndonesiaDailyStat } from 'hooks/indonesia';
+
+import type { SWRIndonesiaDailyStat } from 'types/indonesia';
 
 const DailySection = () => {
   const [modifiedData, setModifiedData] = useState<Serie[]>([]);
@@ -50,7 +51,7 @@ const DailySection = () => {
     manipulateData();
   }, [indonesiaDailyStat.data, selectedPeriod]);
 
-  const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     e.target.value ? setSelectedPeriod(Number(e.target.value)) : setSelectedPeriod(undefined);
   };
 

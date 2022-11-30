@@ -1,14 +1,15 @@
 import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import { DateTime } from 'luxon';
-import { useIndonesiaStat } from 'hooks/indonesia';
-import { SWRIndonesiaStat } from 'types/indonesia';
 
 import { StatText } from 'components/stats';
+import { useIndonesiaStat } from 'hooks/indonesia';
+
+import type { SWRIndonesiaStat } from 'types/indonesia';
 
 const CumulativeSection = () => {
   const indonesiaStat: SWRIndonesiaStat = useIndonesiaStat();
 
-  if (indonesiaStat.isError) return <Text>Failed to Fetch Data</Text>;
+  if (indonesiaStat.isError) return <Text>Failed to fetch cumulative data.</Text>;
 
   return (
     <Box>

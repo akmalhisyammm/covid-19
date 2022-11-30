@@ -1,10 +1,12 @@
-import { useState } from 'react';
 import { Box, SimpleGrid, Text } from '@chakra-ui/react';
-import Select, { SingleValue, StylesConfig } from 'react-select';
-import { useCountryList, useCountryStat } from 'hooks/country';
-import { SelectCountryList, SWRCountryList, SWRCountryStat } from 'types/country';
+import { useState } from 'react';
+import Select from 'react-select';
 
 import { StatText } from 'components/stats';
+import { useCountryList, useCountryStat } from 'hooks/country';
+
+import type { SingleValue, StylesConfig } from 'react-select';
+import type { SelectCountryList, SWRCountryList, SWRCountryStat } from 'types/country';
 
 const CountrySection = () => {
   const [selectedCountry, setSelectedCountry] = useState<string>('');
@@ -39,7 +41,7 @@ const CountrySection = () => {
     input ? setSelectedCountry(input.value) : setSelectedCountry('');
   };
 
-  if (countryStat.isError || countryList.isError) return <Text>Failed to Fetch Country Data</Text>;
+  if (countryStat.isError || countryList.isError) return <Text>Failed to fetch country data.</Text>;
 
   return (
     <Box marginY={8}>

@@ -2,16 +2,17 @@ import { Box, Button, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { FaArrowRight } from 'react-icons/fa';
 import { DateTime } from 'luxon';
-import { useCountryStat } from 'hooks/country';
-import { SWRCountryStat } from 'types/country';
 
 import { StatCard } from 'components/stats';
+import { useCountryStat } from 'hooks/country';
+
+import type { SWRCountryStat } from 'types/country';
 
 const IndonesiaSection = () => {
   const router = useRouter();
   const indonesiaStat: SWRCountryStat = useCountryStat('IDN');
 
-  if (indonesiaStat.isError) return <Text>Failed to Fetch Data</Text>;
+  if (indonesiaStat.isError) return <Text>Failed to fetch Indonesia data.</Text>;
 
   return (
     <Box
