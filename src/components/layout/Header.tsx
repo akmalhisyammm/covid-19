@@ -33,7 +33,7 @@ const Header = () => {
               <Image src="/covid19-logo.png" alt="logo" width={50} />
               <Box marginLeft={4}>
                 <Heading as="h1" fontSize={['md', 'xl']}>
-                  COVID-19 Statistic
+                  COVID-19
                 </Heading>
                 <Text as="small">Global - Indonesia</Text>
               </Box>
